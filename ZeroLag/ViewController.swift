@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         waterReminderLabel.countdownDelegate = self
+        waterReminderLabel.textColor = .white
+        waterReminderLabel.font = UIFont(name:"Helvetica", size: 30)
         waterReminderLabel.setCountDownTime(minutes: 3) // Input in seconds
         waterReminderLabel.then(targetTime: 1) { [unowned self] in
             self.notificationController.scheduleReminders(title: "Drink Water", body: "Hydrate or diedrate", delay: 1)
