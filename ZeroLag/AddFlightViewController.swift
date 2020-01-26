@@ -169,6 +169,7 @@ class AddFlightViewController: UIViewController {
             
             n = n+1
         }
+        newDate.reverse()
         //print(newDate)
         //print(newStartSleepTime)
         //print(newEndSleepTime)
