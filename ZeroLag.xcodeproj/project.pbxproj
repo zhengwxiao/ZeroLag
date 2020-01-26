@@ -17,6 +17,8 @@
 		3B512B9223DD258F000BD458 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B9123DD258F000BD458 /* NotificationController.swift */; };
 		3B512B9423DD7A40000BD458 /* AddFlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B9323DD7A40000BD458 /* AddFlightViewController.swift */; };
 		3B512B9623DD7A78000BD458 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B9523DD7A78000BD458 /* HomeViewController.swift */; };
+		3B512B9923DD9E21000BD458 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B9823DD9E21000BD458 /* WelcomeViewController.swift */; };
+		3B512B9B23DD9E4F000BD458 /* SleepScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B9A23DD9E4F000BD458 /* SleepScheduleViewController.swift */; };
 		5AE994FBE38CDF73FCA58084 /* Pods_ZeroLag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D79664C2DD7ACAC0B3DCB8 /* Pods_ZeroLag.framework */; };
 		D948505723DD91E000F2CDC0 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D948505623DD91E000F2CDC0 /* PreferencesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +37,8 @@
 		3B512B9123DD258F000BD458 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		3B512B9323DD7A40000BD458 /* AddFlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFlightViewController.swift; sourceTree = "<group>"; };
 		3B512B9523DD7A78000BD458 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3B512B9823DD9E21000BD458 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		3B512B9A23DD9E4F000BD458 /* SleepScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepScheduleViewController.swift; sourceTree = "<group>"; };
 		D948505623DD91E000F2CDC0 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		DF6375CBA0BEF48B970C89F8 /* Pods-ZeroLag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroLag.release.xcconfig"; path = "Target Support Files/Pods-ZeroLag/Pods-ZeroLag.release.xcconfig"; sourceTree = "<group>"; };
 		E29444383D98AAE748A05D79 /* Pods-ZeroLag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroLag.debug.xcconfig"; path = "Target Support Files/Pods-ZeroLag/Pods-ZeroLag.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 		3B512B7923DD1EBB000BD458 /* ZeroLag */ = {
 			isa = PBXGroup;
 			children = (
+				3B512B9723DD9DF4000BD458 /* Setup */,
 				3B512B7A23DD1EBB000BD458 /* AppDelegate.swift */,
 				3B512B7C23DD1EBB000BD458 /* SceneDelegate.swift */,
 				3B512B9123DD258F000BD458 /* NotificationController.swift */,
@@ -87,6 +92,15 @@
 				3B512B8323DD1EBB000BD458 /* ZeroLag.xcdatamodeld */,
 			);
 			path = ZeroLag;
+			sourceTree = "<group>";
+		};
+		3B512B9723DD9DF4000BD458 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				3B512B9823DD9E21000BD458 /* WelcomeViewController.swift */,
+				3B512B9A23DD9E4F000BD458 /* SleepScheduleViewController.swift */,
+			);
+			path = Setup;
 			sourceTree = "<group>";
 		};
 		7321CC14ED28721C25A5DF7B /* Pods */ = {
@@ -221,12 +235,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B512B9923DD9E21000BD458 /* WelcomeViewController.swift in Sources */,
 				3B512B9223DD258F000BD458 /* NotificationController.swift in Sources */,
 				3B512B8523DD1EBB000BD458 /* ZeroLag.xcdatamodeld in Sources */,
 				3B512B9423DD7A40000BD458 /* AddFlightViewController.swift in Sources */,
 				D948505723DD91E000F2CDC0 /* PreferencesViewController.swift in Sources */,
 				3B512B7F23DD1EBB000BD458 /* ScheduleViewController.swift in Sources */,
 				3B512B7B23DD1EBB000BD458 /* AppDelegate.swift in Sources */,
+				3B512B9B23DD9E4F000BD458 /* SleepScheduleViewController.swift in Sources */,
 				3B512B9623DD7A78000BD458 /* HomeViewController.swift in Sources */,
 				3B512B7D23DD1EBB000BD458 /* SceneDelegate.swift in Sources */,
 			);
