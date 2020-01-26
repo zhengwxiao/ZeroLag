@@ -9,10 +9,17 @@
 import UIKit
 
 class FlightsViewController: UIViewController {
-
+    @IBOutlet weak var FlightNum: UILabel!
+    @IBOutlet weak var DepartLabel: UILabel!
+    @IBOutlet weak var ArrivalLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy HH:mm"
+        FlightNum.text = choice?.flightNumber
+        DepartLabel.text = choice?.departureTime
+        ArrivalLabel.text = choice?.arrivalTime
         // Do any additional setup after loading the view.
     }
     

@@ -56,13 +56,14 @@ struct passengerCapacity: Decodable {
     let first: Int
 }
 
+var date = ""
+var flightNumber = ""
+var choice: Flight?
+
 class AddFlightViewController: UIViewController {
     
     @IBOutlet weak var flightDatePicker: UIDatePicker!
     @IBOutlet weak var flightNumberTextField: UITextField!
-    var date = ""
-    var flightNumber = ""
-    var choice: Flight?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +80,7 @@ class AddFlightViewController: UIViewController {
         print(date)
         print(flightNumber)
         getFlight()
+        calculateSleep()
     }
     
     func getFlight() {
@@ -94,9 +96,9 @@ class AddFlightViewController: UIViewController {
             do {
                 let flightData = try JSONDecoder().decode([Flight].self, from: data)
                 for flight in flightData {
-                    if flight.flightNumber == self.flightNumber {
-                        self.choice = flight
-                        print(flight)
+                    if flight.flightNumber == flightNumber {
+                        choice = flight
+                        //print(flight)
                     }
                 }
             } catch let JsonErr {
@@ -105,6 +107,67 @@ class AddFlightViewController: UIViewController {
             
         }.resume()
     }
+    
+    func calculateSleep() {
+        var isEast:Bool
+        let originTimeZone = (choice?.departureTime)?.suffix(6)
+        let destinationTimeZone = (choice?.arrivalTime)?.suffix(6)
+        guard let originTimeZoneTemp = originTimeZone?.prefix(3) else { return }
+        guard let destinationTimeZoneTemp = destinationTimeZone?.prefix(3) else { return }
+        guard let originTimeZoneInt = Int(String(originTimeZoneTemp)) else {return}
+        guard let destinationTimeZoneInt = Int(String(destinationTimeZoneTemp)) else {return}
+        var timeDifference = destinationTimeZoneInt - originTimeZoneInt
+        if ((destinationTimeZoneInt - originTimeZoneInt) < 0) {
+            isEast = false
+            timeDifference = (timeDifference * -1) / 2
+            getNewDate(isEast: isEast, timeDifference: timeDifference)
+        }
+        else  if ((destinationTimeZoneInt - originTimeZoneInt) > 0){
+            isEast = true
+            getNewDate(isEast: isEast, timeDifference: timeDifference)
+        }
+        else {
+            timeDifference = 0;
+            print("Same time zone, keep same sleep schedule")
+        }
+            
+    }
+    
+    let startSleepTime = 22 // 10pm
+    let endSleepTime = 6 // 6am
+    
+    func getNewDate(isEast:Bool, timeDifference:Int) {
+        
+        // HARDCODED TIME DIFF, NO INTERNATIONAL FLIGHTS IN AA API
+        let timeDifference = 8
+        
+        guard var dateint = Int(date.suffix(2)) else {return}
+        var newDate = [String](repeating: "", count: timeDifference)
+        var newStartSleepTime = [Int](repeating: -1, count: timeDifference)
+        var newEndSleepTime = [Int](repeating: -1, count: timeDifference)
+        var multiplier = 1
+        if !isEast {
+            multiplier = 2
+        }
+        var n = 1
+        print("tdiff: " + String(timeDifference))
+        while(n <= timeDifference) {
+            dateint = dateint - 1;
+            newDate[n-1] = date.prefix(8) + String(dateint)
+            newStartSleepTime[n-1] = (startSleepTime - (n * multiplier)) % 24
+            newEndSleepTime[n-1] = (endSleepTime - (n * multiplier)) % 24
+            n = n+1
+        }
+        print(newDate)
+        print(newStartSleepTime)
+        print(newEndSleepTime)
+        
+    }
+    
+
+
+    
+    
     
     /*
     // MARK: - Navigation
