@@ -11,6 +11,9 @@ import CountdownLabel
 
 class ScheduleViewController: UIViewController {
     
+    @IBOutlet weak var waterLabel: UILabel!
+    @IBOutlet weak var sleepLabel: UILabel!
+    
     @IBOutlet weak var waterCountdownLabel: CountdownLabel!
     
     @IBOutlet weak var sleepCountdownLabel: CountdownLabel!
@@ -28,6 +31,7 @@ class ScheduleViewController: UIViewController {
         waterCountdownLabel.setCountDownTime(minutes: 10) // Input in seconds
         waterCountdownLabel.then(targetTime: 1) { [unowned self] in
             self.notificationController.scheduleReminders(title: "Drink Water", body: "Hydrate or diedrate", delay: 1)
+            self.waterLabel.text = "Drink water now!"
         }
         waterCountdownLabel.start()
         
