@@ -21,6 +21,7 @@
 		3B512B9B23DD9E4F000BD458 /* SleepScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B9A23DD9E4F000BD458 /* SleepScheduleViewController.swift */; };
 		5AE994FBE38CDF73FCA58084 /* Pods_ZeroLag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D79664C2DD7ACAC0B3DCB8 /* Pods_ZeroLag.framework */; };
 		D948505723DD91E000F2CDC0 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D948505623DD91E000F2CDC0 /* PreferencesViewController.swift */; };
+		DA60240223DDA17100BD8069 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60240123DDA17100BD8069 /* FlightsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		3B512B9823DD9E21000BD458 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		3B512B9A23DD9E4F000BD458 /* SleepScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepScheduleViewController.swift; sourceTree = "<group>"; };
 		D948505623DD91E000F2CDC0 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		DA60240123DDA17100BD8069 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
 		DF6375CBA0BEF48B970C89F8 /* Pods-ZeroLag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroLag.release.xcconfig"; path = "Target Support Files/Pods-ZeroLag/Pods-ZeroLag.release.xcconfig"; sourceTree = "<group>"; };
 		E29444383D98AAE748A05D79 /* Pods-ZeroLag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroLag.debug.xcconfig"; path = "Target Support Files/Pods-ZeroLag/Pods-ZeroLag.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 				3B512B7C23DD1EBB000BD458 /* SceneDelegate.swift */,
 				3B512B9123DD258F000BD458 /* NotificationController.swift */,
 				3B512B7E23DD1EBB000BD458 /* ScheduleViewController.swift */,
+				DA60240123DDA17100BD8069 /* FlightsViewController.swift */,
 				3B512B9523DD7A78000BD458 /* HomeViewController.swift */,
 				3B512B9323DD7A40000BD458 /* AddFlightViewController.swift */,
 				3B512B8023DD1EBB000BD458 /* Main.storyboard */,
@@ -237,6 +240,7 @@
 			files = (
 				3B512B9923DD9E21000BD458 /* WelcomeViewController.swift in Sources */,
 				3B512B9223DD258F000BD458 /* NotificationController.swift in Sources */,
+				DA60240223DDA17100BD8069 /* FlightsViewController.swift in Sources */,
 				3B512B8523DD1EBB000BD458 /* ZeroLag.xcdatamodeld in Sources */,
 				3B512B9423DD7A40000BD458 /* AddFlightViewController.swift in Sources */,
 				D948505723DD91E000F2CDC0 /* PreferencesViewController.swift in Sources */,
