@@ -10,14 +10,20 @@ import UIKit
 
 class PreferencesViewController: UIViewController {
 
+    @IBOutlet weak var sleepDatePicker: UIDatePicker!
+    
+    @IBOutlet weak var wakeDatePicker: UIDatePicker!
     @IBOutlet weak var label: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = "example"
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func donePressed(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -123,7 +123,7 @@
             </objects>
             <point key="canvasLocation" x="207.24637681159422" y="-341.51785714285711"/>
         </scene>
-        <!--Preferences View Controller-->
+        <!--Sleep Preferences-->
         <scene sceneID="Fse-up-LnR">
             <objects>
                 <viewController id="EBS-8f-VCw" customClass="PreferencesViewController" customModule="ZeroLag" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,25 +131,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1d-nf-ENI">
-                                <rect key="frame" x="124" y="140" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What time do you sleep?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1d-nf-ENI">
+                                <rect key="frame" x="20" y="159" width="269" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7e8-im-3pe">
+                                <rect key="frame" x="0.0" y="193" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What time do you wake up?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-ru-vr8">
+                                <rect key="frame" x="20" y="435" width="307" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZfC-7Y-G27">
+                                <rect key="frame" x="0.0" y="469" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsB-HD-lYZ">
+                                <rect key="frame" x="183" y="843" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.94920137969999996" blue="0.88608113830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="35K-Eq-dc2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tPM-wf-xK4"/>
+                    <navigationItem key="navigationItem" title="Sleep Preferences" id="tPM-wf-xK4">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="dMJ-mF-ZR2">
+                            <connections>
+                                <action selector="donePressed:" destination="EBS-8f-VCw" id="vPR-zh-rY7"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="iUD-f5-HrP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="donePressed" destination="dMJ-mF-ZR2" id="A3y-7K-cY6"/>
                         <outlet property="label" destination="C1d-nf-ENI" id="fxA-B4-JxP"/>
+                        <outlet property="sleepDatePicker" destination="7e8-im-3pe" id="0Z3-rD-btn"/>
+                        <outlet property="wakeDatePicker" destination="ZfC-7Y-G27" id="uTY-dc-P82"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEB-hj-r4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="-338"/>
+            <point key="canvasLocation" x="1249.2753623188407" y="-338.16964285714283"/>
         </scene>
         <!--Home-->
         <scene sceneID="CIN-NW-bnB">
@@ -282,4 +312,7 @@ Drink water in</string>
         <image name="sleep" width="772" height="772"/>
         <image name="sun" width="180" height="170"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="iUD-f5-HrP"/>
+    </inferredMetricsTieBreakers>
 </document>
