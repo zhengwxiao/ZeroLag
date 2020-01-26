@@ -14,16 +14,16 @@ class NotificationController: NSObject {
     let notificationCenter = UNUserNotificationCenter.current()
     
     // Transferred to ExensionDelegate
-    func scheduleReminders() {
+    func scheduleReminders(title: String, body: String, delay: Double) {
         // notificationCenter.removeAllPendingNotificationRequests()
         
         let content = UNMutableNotificationContent()
-        content.title = "Drink Water"
-        content.body = "Hydrate or diedrate!"
+        content.title = title
+        content.body = body
         content.sound = UNNotificationSound.default
            
         // Create the trigger as a repeating event.
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
         
         // Create the request
         let uuidString = UUID().uuidString
