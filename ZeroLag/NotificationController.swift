@@ -17,6 +17,10 @@ class NotificationController: NSObject {
     func scheduleReminders(title: String, body: String, delay: Double) {
         // notificationCenter.removeAllPendingNotificationRequests()
         
+        notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            print("Notification authorization: \(granted)")
+        }
+        
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = body

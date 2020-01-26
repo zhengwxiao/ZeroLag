@@ -126,7 +126,7 @@ class AddFlightViewController: UIViewController {
             isEast = false
             timeDifference = (timeDifference * -1) / 2
             // HARDCODED TIME DIFF, NO INTERNATIONAL FLIGHTS IN AA API
-            let timeDifference = 8
+            //let timeDifference = 8
             var sleepAndWake = [Int](repeating: -1, count: timeDifference*2)
             sleepAndWake = getNewDate(isEast: isEast, timeDifference: timeDifference)
             UserDefaults.standard.set(sleepAndWake, forKey: "sleepAndWakeTimes")
@@ -134,7 +134,7 @@ class AddFlightViewController: UIViewController {
         else  if ((destinationTimeZoneInt - originTimeZoneInt) > 0){
             isEast = true
             // HARDCODED TIME DIFF, NO INTERNATIONAL FLIGHTS IN AA API
-            let timeDifference = 8
+            //let timeDifference = 8
             var sleepAndWake = [Int](repeating: -1, count: timeDifference*2)
             sleepAndWake = getNewDate(isEast: isEast, timeDifference: timeDifference)
             UserDefaults.standard.set(sleepAndWake, forKey: "sleepAndWakeTimes")
@@ -156,9 +156,9 @@ class AddFlightViewController: UIViewController {
         var newEndSleepTime = [Int](repeating: -1, count: timeDifference)
         var multiplier = 1
         //TODO(andrew)
-        /*if !isEast {
+        if !isEast {
             multiplier = 2
-        }*/
+        }
         var n = 1
         print("tdiff: " + String(timeDifference))
         while(n <= timeDifference) {

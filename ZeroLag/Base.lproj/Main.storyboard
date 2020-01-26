@@ -153,8 +153,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7e8-im-3pe">
+                                    <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7e8-im-3pe">
                                         <rect key="frame" x="27" y="41.5" width="320" height="227"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="601790400.658198">
+                                            <!--2020-01-27 04:00:00 +0000-->
+                                        </date>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What time do you wake up?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-ru-vr8">
                                         <rect key="frame" x="33.5" y="282.5" width="307" height="27.5"/>
@@ -162,8 +165,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZfC-7Y-G27">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfC-7Y-G27">
                                         <rect key="frame" x="27" y="324" width="320" height="229"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="601732800.80515099">
+                                            <!--2020-01-26 12:00:00 +0000-->
+                                        </date>
                                     </datePicker>
                                 </subviews>
                             </stackView>
@@ -180,6 +186,7 @@
                     <navigationItem key="navigationItem" title="Sleep Schedule" id="tPM-wf-xK4">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="dMJ-mF-ZR2">
                             <connections>
+                                <action selector="donePressed:" destination="EBS-8f-VCw" id="joT-9a-Hmq"/>
                                 <segue destination="YKg-xm-Gsh" kind="show" id="sOg-dD-lwG"/>
                             </connections>
                         </barButtonItem>
@@ -215,7 +222,7 @@
         <scene sceneID="eLy-0b-Bw4">
             <objects>
                 <tabBarController id="EPV-qH-uhv" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F8m-Sp-FZd">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="F8m-Sp-FZd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -297,6 +304,9 @@
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="waterDonePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vJA-Ij-Fow"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep in" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPP-71-CJV">
                                         <rect key="frame" x="0.0" y="148.5" width="91.5" height="23"/>
@@ -305,9 +315,29 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="l1n-ZF-WH1" customClass="CountdownLabel" customModule="CountdownLabel">
-                                        <rect key="frame" x="0.0" y="183.5" width="187" height="73"/>
+                                        <rect key="frame" x="0.0" y="183.5" width="187" height="31"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dY5-Rw-8hb">
+                                        <rect key="frame" x="0.0" y="226.5" width="80" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IBU-ht-KUf"/>
+                                            <constraint firstAttribute="width" constant="80" id="mkY-1u-wrL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="Skip">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="skipPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jK1-cr-1Y4"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre-flight Sleep Schedule" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmr-wl-Q3r">
                                         <rect key="frame" x="0.0" y="268.5" width="279.5" height="32.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
@@ -345,6 +375,7 @@
                     <navigationItem key="navigationItem" title="Your Schedule" id="3xy-O7-WHJ"/>
                     <connections>
                         <outlet property="sleepCountdownLabel" destination="l1n-ZF-WH1" id="efm-ka-T9e"/>
+                        <outlet property="sleepImageView" destination="GVl-eN-6zZ" id="2Jc-dd-aog"/>
                         <outlet property="sleepLabel" destination="CPP-71-CJV" id="GBL-DE-fXN"/>
                         <outlet property="sleepScheduleTextView" destination="AXc-F6-MD2" id="ilx-o0-LOa"/>
                         <outlet property="waterCountdownLabel" destination="3Kw-S3-ixv" id="jZv-dT-UnA"/>
