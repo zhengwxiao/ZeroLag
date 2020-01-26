@@ -98,7 +98,7 @@ class AddFlightViewController: UIViewController {
                 for flight in flightData {
                     if flight.flightNumber == flightNumber {
                         choice = flight
-                        print(flight)
+                        //print(flight)
                     }
                 }
             } catch let JsonErr {
@@ -120,23 +120,47 @@ class AddFlightViewController: UIViewController {
         if ((destinationTimeZoneInt - originTimeZoneInt) < 0) {
             isEast = false
             timeDifference = (timeDifference * -1) / 2
+            getNewDate(isEast: isEast, timeDifference: timeDifference)
         }
         else  if ((destinationTimeZoneInt - originTimeZoneInt) > 0){
             isEast = true
+            getNewDate(isEast: isEast, timeDifference: timeDifference)
         }
         else {
             timeDifference = 0;
-            print("same time zone")
+            print("Same time zone, keep same sleep schedule")
         }
             
     }
     
+    let startSleepTime = 22 // 10pm
+    let endSleepTime = 6 // 6am
+    
     func getNewDate(isEast:Bool, timeDifference:Int) {
         
+        // HARDCODED TIME DIFF, NO INTERNATIONAL FLIGHTS IN AA API
+        let timeDifference = 8
+        
         guard var dateint = Int(date.suffix(2)) else {return}
-        for index in 1...timeDifference {
-            dateint = dateint - 1;
+        var newDate = [String](repeating: "", count: timeDifference)
+        var newStartSleepTime = [Int](repeating: -1, count: timeDifference)
+        var newEndSleepTime = [Int](repeating: -1, count: timeDifference)
+        var multiplier = 1
+        if !isEast {
+            multiplier = 2
         }
+        var n = 1
+        print("tdiff: " + String(timeDifference))
+        while(n <= timeDifference) {
+            dateint = dateint - 1;
+            newDate[n-1] = date.prefix(8) + String(dateint)
+            newStartSleepTime[n-1] = (startSleepTime - (n * multiplier)) % 24
+            newEndSleepTime[n-1] = (endSleepTime - (n * multiplier)) % 24
+            n = n+1
+        }
+        print(newDate)
+        print(newStartSleepTime)
+        print(newEndSleepTime)
         
     }
     
