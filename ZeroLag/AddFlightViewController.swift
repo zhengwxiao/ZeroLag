@@ -139,7 +139,7 @@ class AddFlightViewController: UIViewController {
     func getNewDate(isEast:Bool, timeDifference:Int) {
         
         // HARDCODED TIME DIFF, NO INTERNATIONAL FLIGHTS IN AA API
-        //let timeDifference = 8
+        let timeDifference = 8
         
         guard var dateint = Int(date.suffix(2)) else {return}
         var newDate = [String](repeating: "", count: timeDifference)
