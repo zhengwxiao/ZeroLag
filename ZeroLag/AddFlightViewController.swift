@@ -146,21 +146,32 @@ class AddFlightViewController: UIViewController {
         var newStartSleepTime = [Int](repeating: -1, count: timeDifference)
         var newEndSleepTime = [Int](repeating: -1, count: timeDifference)
         var multiplier = 1
-        if !isEast {
+        //TODO(andrew)
+        /*if !isEast {
             multiplier = 2
-        }
+        }*/
         var n = 1
         print("tdiff: " + String(timeDifference))
         while(n <= timeDifference) {
             dateint = dateint - 1;
             newDate[n-1] = date.prefix(8) + String(dateint)
-            newStartSleepTime[n-1] = (startSleepTime - (n * multiplier)) % 24
-            newEndSleepTime[n-1] = (endSleepTime - (n * multiplier)) % 24
+            newStartSleepTime[n-1] = startSleepTime - (n * multiplier)
+            newEndSleepTime[n-1] = endSleepTime - (n * multiplier)
+            
+            // hardcoded modulo lol
+            if newStartSleepTime[n-1] < 0 {
+                newStartSleepTime[n-1] += 24
+            }
+            
+            if newEndSleepTime[n-1] < 0 {
+                newEndSleepTime[n-1] += 24
+            }
+            
             n = n+1
         }
-        print(newDate)
-        print(newStartSleepTime)
-        print(newEndSleepTime)
+        //print(newDate)
+        //print(newStartSleepTime)
+        //print(newEndSleepTime)
         
     }
     
