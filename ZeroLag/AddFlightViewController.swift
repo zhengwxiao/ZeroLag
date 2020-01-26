@@ -125,28 +125,32 @@ class AddFlightViewController: UIViewController {
         if ((destinationTimeZoneInt - originTimeZoneInt) < 0) {
             isEast = false
             timeDifference = (timeDifference * -1) / 2
-            getNewDate(isEast: isEast, timeDifference: timeDifference)
+            // HARDCODED TIME DIFF, NO INTERNATIONAL FLIGHTS IN AA API
+            let timeDifference = 8
+            var sleepAndWake = [Int](repeating: -1, count: timeDifference*2)
+            sleepAndWake = getNewDate(isEast: isEast, timeDifference: timeDifference)
+            UserDefaults.standard.set(sleepAndWake, forKey: "sleepAndWakeTimes")
         }
         else  if ((destinationTimeZoneInt - originTimeZoneInt) > 0){
             isEast = true
-            getNewDate(isEast: isEast, timeDifference: timeDifference)
+            // HARDCODED TIME DIFF, NO INTERNATIONAL FLIGHTS IN AA API
+            let timeDifference = 8
+            var sleepAndWake = [Int](repeating: -1, count: timeDifference*2)
+            sleepAndWake = getNewDate(isEast: isEast, timeDifference: timeDifference)
+            UserDefaults.standard.set(sleepAndWake, forKey: "sleepAndWakeTimes")
         }
         else {
             timeDifference = 0;
             print("Same time zone, keep same sleep schedule")
         }
-            
+        
     }
     
     let startSleepTime = 22 // 10pm
     let endSleepTime = 6 // 6am
     
-    func getNewDate(isEast:Bool, timeDifference:Int) {
-        
-        // HARDCODED TIME DIFF, NO INTERNATIONAL FLIGHTS IN AA API
-        let timeDifference = 8
-        
-        guard var dateint = Int(date.suffix(2)) else {return}
+    func getNewDate(isEast:Bool, timeDifference:Int) -> [Int] {
+        var dateint = Int(date.suffix(2))
         var newDate = [String](repeating: "", count: timeDifference)
         var newStartSleepTime = [Int](repeating: -1, count: timeDifference)
         var newEndSleepTime = [Int](repeating: -1, count: timeDifference)
@@ -158,8 +162,8 @@ class AddFlightViewController: UIViewController {
         var n = 1
         print("tdiff: " + String(timeDifference))
         while(n <= timeDifference) {
-            dateint = dateint - 1;
-            newDate[n-1] = date.prefix(8) + String(dateint)
+            dateint = dateint! - 1;
+            newDate[n-1] = date.prefix(8) + String(dateint!)
             newStartSleepTime[n-1] = startSleepTime - (n * multiplier)
             newEndSleepTime[n-1] = endSleepTime - (n * multiplier)
             
@@ -183,6 +187,16 @@ class AddFlightViewController: UIViewController {
          print(newStartSleepTime)
          print(newEndSleepTime)
         
+        var sleepAndWake = [Int](repeating: -1, count: timeDifference*2)
+        var i = 0
+        var j = 0
+        while i < timeDifference {
+            sleepAndWake[j] = newStartSleepTime[i]
+            sleepAndWake[j+1] = newEndSleepTime[i]
+            j += 2
+            i += 1
+        }
+        return sleepAndWake
     }
     
 
