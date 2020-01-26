@@ -21,9 +21,12 @@ class AddFlightViewController: UIViewController {
     }
     
     @IBAction func searchPressed(_ sender: Any) {
-        print(flightDatePicker.date)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        print(formatter.string(from: flightDatePicker.date))
         print(flightNumberTextField.text!)
     }
+    
     
     /*
     // MARK: - Navigation
