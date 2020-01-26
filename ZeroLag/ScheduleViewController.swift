@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ScheduleViewController.swift
 //  ZeroLag
 //
 //  Created by Z Xiao on 1/25/20.
@@ -9,7 +9,7 @@
 import UIKit
 import CountdownLabel
 
-class ViewController: UIViewController {
+class ScheduleViewController: UIViewController {
     
     @IBOutlet weak var waterReminderLabel: CountdownLabel!
     
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: CountdownLabelDelegate {
+extension ScheduleViewController: CountdownLabelDelegate {
     func countdownFinished() {
         
     }

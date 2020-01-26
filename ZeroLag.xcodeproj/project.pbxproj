@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		3B512B7B23DD1EBB000BD458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B7A23DD1EBB000BD458 /* AppDelegate.swift */; };
 		3B512B7D23DD1EBB000BD458 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B7C23DD1EBB000BD458 /* SceneDelegate.swift */; };
-		3B512B7F23DD1EBB000BD458 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B7E23DD1EBB000BD458 /* ViewController.swift */; };
+		3B512B7F23DD1EBB000BD458 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B7E23DD1EBB000BD458 /* ScheduleViewController.swift */; };
 		3B512B8223DD1EBB000BD458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B512B8023DD1EBB000BD458 /* Main.storyboard */; };
 		3B512B8523DD1EBB000BD458 /* ZeroLag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B8323DD1EBB000BD458 /* ZeroLag.xcdatamodeld */; };
 		3B512B8723DD1EBD000BD458 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B512B8623DD1EBD000BD458 /* Assets.xcassets */; };
 		3B512B8A23DD1EBD000BD458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B512B8823DD1EBD000BD458 /* LaunchScreen.storyboard */; };
 		3B512B9223DD258F000BD458 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B9123DD258F000BD458 /* NotificationController.swift */; };
+		3B512B9423DD7A40000BD458 /* AddFlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B9323DD7A40000BD458 /* AddFlightViewController.swift */; };
+		3B512B9623DD7A78000BD458 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B512B9523DD7A78000BD458 /* HomeViewController.swift */; };
 		5AE994FBE38CDF73FCA58084 /* Pods_ZeroLag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D79664C2DD7ACAC0B3DCB8 /* Pods_ZeroLag.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,13 +25,15 @@
 		3B512B7723DD1EBB000BD458 /* ZeroLag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroLag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B512B7A23DD1EBB000BD458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B512B7C23DD1EBB000BD458 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3B512B7E23DD1EBB000BD458 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B512B7E23DD1EBB000BD458 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		3B512B8123DD1EBB000BD458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B512B8423DD1EBB000BD458 /* ZeroLag.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZeroLag.xcdatamodel; sourceTree = "<group>"; };
 		3B512B8623DD1EBD000BD458 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B512B8923DD1EBD000BD458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B512B8B23DD1EBD000BD458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B512B9123DD258F000BD458 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		3B512B9323DD7A40000BD458 /* AddFlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFlightViewController.swift; sourceTree = "<group>"; };
+		3B512B9523DD7A78000BD458 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DF6375CBA0BEF48B970C89F8 /* Pods-ZeroLag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroLag.release.xcconfig"; path = "Target Support Files/Pods-ZeroLag/Pods-ZeroLag.release.xcconfig"; sourceTree = "<group>"; };
 		E29444383D98AAE748A05D79 /* Pods-ZeroLag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroLag.debug.xcconfig"; path = "Target Support Files/Pods-ZeroLag/Pods-ZeroLag.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +74,9 @@
 				3B512B7A23DD1EBB000BD458 /* AppDelegate.swift */,
 				3B512B7C23DD1EBB000BD458 /* SceneDelegate.swift */,
 				3B512B9123DD258F000BD458 /* NotificationController.swift */,
-				3B512B7E23DD1EBB000BD458 /* ViewController.swift */,
+				3B512B7E23DD1EBB000BD458 /* ScheduleViewController.swift */,
+				3B512B9523DD7A78000BD458 /* HomeViewController.swift */,
+				3B512B9323DD7A40000BD458 /* AddFlightViewController.swift */,
 				3B512B8023DD1EBB000BD458 /* Main.storyboard */,
 				3B512B8623DD1EBD000BD458 /* Assets.xcassets */,
 				3B512B8823DD1EBD000BD458 /* LaunchScreen.storyboard */,
@@ -214,8 +220,10 @@
 			files = (
 				3B512B9223DD258F000BD458 /* NotificationController.swift in Sources */,
 				3B512B8523DD1EBB000BD458 /* ZeroLag.xcdatamodeld in Sources */,
-				3B512B7F23DD1EBB000BD458 /* ViewController.swift in Sources */,
+				3B512B9423DD7A40000BD458 /* AddFlightViewController.swift in Sources */,
+				3B512B7F23DD1EBB000BD458 /* ScheduleViewController.swift in Sources */,
 				3B512B7B23DD1EBB000BD458 /* AppDelegate.swift in Sources */,
+				3B512B9623DD7A78000BD458 /* HomeViewController.swift in Sources */,
 				3B512B7D23DD1EBB000BD458 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

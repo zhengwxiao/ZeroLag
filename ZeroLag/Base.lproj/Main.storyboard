@@ -10,7 +10,7 @@
         <!--Home-->
         <scene sceneID="bA6-bM-Hk8">
             <objects>
-                <viewController id="YKg-xm-Gsh" sceneMemberID="viewController">
+                <viewController id="YKg-xm-Gsh" customClass="HomeViewController" customModule="ZeroLag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DZ1-bv-EER">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
         <!--Add Flight-->
         <scene sceneID="uVO-XQ-J9g">
             <objects>
-                <viewController id="xik-p5-63g" sceneMemberID="viewController">
+                <viewController id="xik-p5-63g" customClass="AddFlightViewController" customModule="ZeroLag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O3W-BD-eSX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,7 +175,7 @@
         <!--Schedule-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Schedule" customClass="ViewController" customModule="ZeroLag" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Schedule" customClass="ScheduleViewController" customModule="ZeroLag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
