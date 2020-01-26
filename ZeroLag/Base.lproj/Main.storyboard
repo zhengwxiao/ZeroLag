@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EPV-qH-uhv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EPV-qH-uhv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -110,6 +110,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Search" style="done" id="j5p-hS-IFS">
                             <connections>
                                 <action selector="searchPressed:" destination="xik-p5-63g" id="WBB-QL-DYX"/>
+                                <segue destination="EBS-8f-VCw" kind="show" id="thO-mg-mh0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -121,6 +122,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x1G-if-LBB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="207.24637681159422" y="-341.51785714285711"/>
+        </scene>
+        <!--Preferences View Controller-->
+        <scene sceneID="Fse-up-LnR">
+            <objects>
+                <viewController id="EBS-8f-VCw" customClass="PreferencesViewController" customModule="ZeroLag" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YHh-cb-izO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1d-nf-ENI">
+                                <rect key="frame" x="124" y="140" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="35K-Eq-dc2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tPM-wf-xK4"/>
+                    <connections>
+                        <outlet property="label" destination="C1d-nf-ENI" id="fxA-B4-JxP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEB-hj-r4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1250" y="-338"/>
         </scene>
         <!--Home-->
         <scene sceneID="CIN-NW-bnB">
@@ -189,14 +218,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="GVl-eN-6zZ">
-                                <rect key="frame" x="159.5" y="160" width="95" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="e1s-PJ-Wl7"/>
-                                    <constraint firstAttribute="width" secondItem="GVl-eN-6zZ" secondAttribute="height" multiplier="18:17" id="tOr-HD-vaJ"/>
-                                </constraints>
+                                <rect key="frame" x="117" y="160" width="180" height="170"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Umd-IG-F3J">
-                                <rect key="frame" x="20" y="280" width="187" height="233.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Umd-IG-F3J">
+                                <rect key="frame" x="20" y="360" width="187" height="233.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfQ-OX-pEg">
                                         <rect key="frame" x="0.0" y="0.0" width="169" height="65"/>
@@ -206,17 +231,17 @@ Drink water in</string>
                                         <color key="textColor" red="0.45834851259999998" green="0.55297040939999997" blue="0.73337584730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Kw-S3-ixv" customClass="CountdownLabel" customModule="CountdownLabel">
+                                    <view contentMode="center" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Kw-S3-ixv" customClass="CountdownLabel" customModule="CountdownLabel">
                                         <rect key="frame" x="0.0" y="77" width="187" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep in" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPP-71-CJV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sleep in" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPP-71-CJV">
                                         <rect key="frame" x="0.0" y="139" width="91.5" height="32.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                         <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="l1n-ZF-WH1" customClass="CountdownLabel" customModule="CountdownLabel">
+                                    <view contentMode="center" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l1n-ZF-WH1" customClass="CountdownLabel" customModule="CountdownLabel">
                                         <rect key="frame" x="0.0" y="183.5" width="187" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -235,9 +260,7 @@ Drink water in</string>
                     <navigationItem key="navigationItem" title="Your Schedule" id="3xy-O7-WHJ"/>
                     <connections>
                         <outlet property="sleepCountdownLabel" destination="l1n-ZF-WH1" id="efm-ka-T9e"/>
-                        <outlet property="sleepLabel" destination="CPP-71-CJV" id="XtY-Wv-iSf"/>
                         <outlet property="waterCountdownLabel" destination="3Kw-S3-ixv" id="jZv-dT-UnA"/>
-                        <outlet property="waterLabel" destination="LfQ-OX-pEg" id="B2I-TD-yHe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
