@@ -13,7 +13,7 @@ import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     var window: UIWindow?
-    let launchedBefore = UserDefaults.standard.bool(forKey: "isFirstLaunch")
+    //let launchedBefore = UserDefaults.standard.bool(forKey: "isFirstLaunch")
     
     let notificationController = NotificationController()
     
@@ -22,14 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         notificationController.notificationCenter.delegate = self
         
-        if !launchedBefore {
-            UserDefaults.standard.set(true, forKey: "isFirstLaunch")
-            
-            // Launch setup
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "SetupNC")
-            window?.rootViewController = vc
-        }
+//        if !launchedBefore {
+//            UserDefaults.standard.set(true, forKey: "isFirstLaunch")
+//
+//            // Launch setup
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "SetupNC")
+//            window?.rootViewController = vc
+//        }
         
         return true
     }

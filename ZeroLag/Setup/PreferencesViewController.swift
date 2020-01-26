@@ -17,11 +17,12 @@ class PreferencesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "example"
         // Do any additional setup after loading the view.
     }
     
     @IBAction func donePressed(_ sender: Any) {
+        UserDefaults.standard.set(sleepDatePicker.date, forKey: "sleepDatePicker")
+        UserDefaults.standard.set(wakeDatePicker.date, forKey: "wakeDatePicker")
     }
     
     /*

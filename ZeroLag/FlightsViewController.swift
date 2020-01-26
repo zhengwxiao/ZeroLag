@@ -17,6 +17,7 @@ class FlightsViewController: UIViewController {
         super.viewDidLoad()
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy HH:mm"
+        
         FlightNum.text = choice?.flightNumber
         DepartLabel.text = choice?.departureTime
         ArrivalLabel.text = choice?.arrivalTime

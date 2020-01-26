@@ -80,7 +80,12 @@ class AddFlightViewController: UIViewController {
         print(date)
         print(flightNumber)
         getFlight()
-        calculateSleep()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.calculateSleep()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "FlightsVC")
+            self.show(vc, sender: Any?.self)
+        }
     }
     
     func getFlight() {
@@ -170,9 +175,13 @@ class AddFlightViewController: UIViewController {
             n = n+1
         }
         newDate.reverse()
-        print(newDate)
-        print(newStartSleepTime)
-        print(newEndSleepTime)
+        
+        UserDefaults.standard.set(newDate, forKey: "newSleepDate")
+        UserDefaults.standard.set(newStartSleepTime, forKey: "newSleepTime")
+        UserDefaults.standard.set(newEndSleepTime, forKey: "newEndSleepTime")
+         print(newDate)
+         print(newStartSleepTime)
+         print(newEndSleepTime)
         
     }
     

@@ -145,25 +145,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Sz3-Nm-28s">
-                                <rect key="frame" x="20" y="160" width="374" height="602"/>
+                                <rect key="frame" x="20" y="160" width="374" height="553"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What time do you sleep?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1d-nf-ENI">
-                                        <rect key="frame" x="52.5" y="0.0" width="269" height="30"/>
+                                        <rect key="frame" x="52.5" y="0.0" width="269" height="27.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7e8-im-3pe">
-                                        <rect key="frame" x="27" y="44" width="320" height="247"/>
+                                        <rect key="frame" x="27" y="41.5" width="320" height="227"/>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What time do you wake up?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-ru-vr8">
-                                        <rect key="frame" x="33.5" y="305" width="307" height="29.5"/>
+                                        <rect key="frame" x="33.5" y="282.5" width="307" height="27.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZfC-7Y-G27">
-                                        <rect key="frame" x="27" y="348.5" width="320" height="253.5"/>
+                                        <rect key="frame" x="27" y="324" width="320" height="229"/>
                                     </datePicker>
                                 </subviews>
                             </stackView>
@@ -180,12 +180,11 @@
                     <navigationItem key="navigationItem" title="Sleep Schedule" id="tPM-wf-xK4">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="dMJ-mF-ZR2">
                             <connections>
-                                <action selector="donePressed:" destination="EBS-8f-VCw" id="vPR-zh-rY7"/>
+                                <segue destination="YKg-xm-Gsh" kind="show" id="sOg-dD-lwG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="donePressed" destination="dMJ-mF-ZR2" id="A3y-7K-cY6"/>
                         <outlet property="label" destination="C1d-nf-ENI" id="fxA-B4-JxP"/>
                         <outlet property="sleepDatePicker" destination="7e8-im-3pe" id="0Z3-rD-btn"/>
                         <outlet property="wakeDatePicker" destination="ZfC-7Y-G27" id="uTY-dc-P82"/>
@@ -205,7 +204,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="YKg-xm-Gsh" kind="relationship" relationship="rootViewController" id="WqK-xM-QEo"/>
+                        <segue destination="0C0-74-gLl" kind="relationship" relationship="rootViewController" id="v5Z-A6-YvZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc1-uK-yA8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -270,22 +269,20 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Umd-IG-F3J">
-                                <rect key="frame" x="20" y="280" width="374" height="233.5"/>
+                                <rect key="frame" x="20" y="280" width="374" height="513"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfQ-OX-pEg">
-                                        <rect key="frame" x="0.0" y="0.0" width="169" height="65"/>
-                                        <string key="text">Stay hydrated!
-Drink water in</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay hydrated! Drink water in" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfQ-OX-pEg">
+                                        <rect key="frame" x="0.0" y="0.0" width="336.5" height="32.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                         <color key="textColor" red="0.45834851259999998" green="0.55297040939999997" blue="0.73337584730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Kw-S3-ixv" customClass="CountdownLabel" customModule="CountdownLabel">
-                                        <rect key="frame" x="0.0" y="77" width="187" height="40.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="187" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwo-u2-R7n">
-                                        <rect key="frame" x="0.0" y="129.5" width="80" height="30"/>
+                                        <rect key="frame" x="0.0" y="106.5" width="80" height="30"/>
                                         <color key="backgroundColor" red="0.45834851259999998" green="0.55297040939999997" blue="0.73337584730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="GWv-vi-KHM"/>
@@ -302,17 +299,34 @@ Drink water in</string>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep in" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPP-71-CJV">
-                                        <rect key="frame" x="0.0" y="171.5" width="91.5" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="148.5" width="91.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                         <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="l1n-ZF-WH1" customClass="CountdownLabel" customModule="CountdownLabel">
-                                        <rect key="frame" x="0.0" y="183.5" width="187" height="50"/>
+                                        <rect key="frame" x="0.0" y="183.5" width="187" height="73"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre-flight Sleep Schedule" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmr-wl-Q3r">
+                                        <rect key="frame" x="0.0" y="268.5" width="279.5" height="32.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <color key="textColor" red="0.45834851259999998" green="0.55297040939999997" blue="0.73337584730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AXc-F6-MD2">
+                                        <rect key="frame" x="0.0" y="313" width="354" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="hMi-s1-lxF"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AXc-F6-MD2" secondAttribute="trailing" constant="20" symbolic="YES" id="KLb-1f-IsU"/>
                                     <constraint firstItem="l1n-ZF-WH1" firstAttribute="top" secondItem="Umd-IG-F3J" secondAttribute="top" constant="183.5" id="paH-hm-gfK"/>
                                 </constraints>
                             </stackView>
@@ -323,7 +337,7 @@ Drink water in</string>
                             <constraint firstItem="Umd-IG-F3J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2bg-q0-vCR"/>
                             <constraint firstItem="GVl-eN-6zZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="AK6-fM-X6n"/>
                             <constraint firstItem="GVl-eN-6zZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JJi-WU-7VT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Umd-IG-F3J" secondAttribute="bottom" constant="299.5" id="NNj-dU-7kq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Umd-IG-F3J" secondAttribute="bottom" constant="20" id="NNj-dU-7kq"/>
                             <constraint firstItem="Umd-IG-F3J" firstAttribute="top" secondItem="GVl-eN-6zZ" secondAttribute="bottom" constant="30" id="xup-oP-d2e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -332,6 +346,7 @@ Drink water in</string>
                     <connections>
                         <outlet property="sleepCountdownLabel" destination="l1n-ZF-WH1" id="efm-ka-T9e"/>
                         <outlet property="sleepLabel" destination="CPP-71-CJV" id="GBL-DE-fXN"/>
+                        <outlet property="sleepScheduleTextView" destination="AXc-F6-MD2" id="ilx-o0-LOa"/>
                         <outlet property="waterCountdownLabel" destination="3Kw-S3-ixv" id="jZv-dT-UnA"/>
                         <outlet property="waterLabel" destination="LfQ-OX-pEg" id="uEg-yG-1au"/>
                     </connections>
@@ -339,22 +354,6 @@ Drink water in</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-652.17391304347836" y="389.73214285714283"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bm9-DI-8VT">
-            <objects>
-                <navigationController storyboardIdentifier="SetupNC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9eZ-Jx-6T3" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="YCc-vk-qft">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="0C0-74-gLl" kind="relationship" relationship="rootViewController" id="TSr-fG-D7G"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wp3-dH-fq1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1542" y="-1282"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="I1a-9N-NLQ">
@@ -407,7 +406,7 @@ let's start by gathering some information about your sleep schedule.</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="EBS-8f-VCw" kind="show" id="VBC-6s-XXz"/>
+                                    <segue destination="EBS-8f-VCw" kind="show" id="A8P-WV-jMP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -423,14 +422,13 @@ let's start by gathering some information about your sleep schedule.</string>
         <!--Your Flights-->
         <scene sceneID="0kg-JU-hmt">
             <objects>
-                <viewController id="qGE-yX-JAT" customClass="FlightsViewController" customModule="ZeroLag" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qGE-yX-JAT" customClass="FlightsViewController" customModule="ZeroLag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5QQ-pw-2mR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1I-Hc-YLa">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1I-Hc-YLa">
                                 <rect key="frame" x="20" y="155" width="374" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flight Number: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuO-mC-2Os">
                                         <rect key="frame" x="24" y="22" width="167" height="26"/>
@@ -461,14 +459,14 @@ let's start by gathering some information about your sleep schedule.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IAH - 3:30pm " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UD-S0-5QX">
-                                        <rect key="frame" x="199" y="65" width="130" height="26"/>
+                                        <rect key="frame" x="199" y="65" width="142" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IAH - 3:30pm " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pG8-Gp-ILy">
-                                        <rect key="frame" x="199" y="108" width="130" height="26"/>
+                                        <rect key="frame" x="199" y="108" width="142" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -477,8 +475,36 @@ let's start by gathering some information about your sleep schedule.</string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMk-cg-lVh">
+                                <rect key="frame" x="137" y="317" width="141" height="30"/>
+                                <color key="backgroundColor" red="0.45834851259999998" green="0.55297040939999997" blue="0.73337584730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="9vc-9l-le8"/>
+                                    <constraint firstAttribute="height" constant="30" id="ytC-Qf-Rc8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="View Schedule">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="AcY-bZ-rS8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98748987909999997" green="0.95754331349999999" blue="0.91763526200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ece-3p-580" firstAttribute="bottom" secondItem="FMk-cg-lVh" secondAttribute="bottom" constant="466" id="9r1-yc-pvR"/>
+                            <constraint firstItem="t1I-Hc-YLa" firstAttribute="leading" secondItem="5QQ-pw-2mR" secondAttribute="leadingMargin" id="SVE-50-jMD"/>
+                            <constraint firstItem="FMk-cg-lVh" firstAttribute="top" secondItem="t1I-Hc-YLa" secondAttribute="bottom" constant="8" id="fHI-GJ-eCp"/>
+                            <constraint firstItem="t1I-Hc-YLa" firstAttribute="top" secondItem="ece-3p-580" secondAttribute="top" constant="15" id="qmW-UJ-avM"/>
+                            <constraint firstItem="FMk-cg-lVh" firstAttribute="centerX" secondItem="t1I-Hc-YLa" secondAttribute="centerX" id="uHJ-fe-tvY"/>
+                            <constraint firstItem="FMk-cg-lVh" firstAttribute="centerX" secondItem="5QQ-pw-2mR" secondAttribute="centerX" id="vrY-vR-l4b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ece-3p-580"/>
                     </view>
                     <navigationItem key="navigationItem" title="Your Flights" id="Nyf-hS-qEm">
@@ -499,13 +525,14 @@ let's start by gathering some information about your sleep schedule.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKX-1a-lD7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1168" y="1076"/>
+            <point key="canvasLocation" x="-1168.1159420289855" y="1074.1071428571429"/>
         </scene>
         <!--Flights-->
         <scene sceneID="xCP-AC-Omp">
             <objects>
-                <navigationController id="Wxr-1E-91d" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FlightsNC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wxr-1E-91d" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Flights" image="airplane" catalog="system" id="V4m-cf-juu"/>
+                    <navigationItem key="navigationItem" id="LkE-kp-xvH"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Hcg-UZ-ihd">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -530,5 +557,8 @@ let's start by gathering some information about your sleep schedule.</string>
         <image name="sleep" width="772" height="772"/>
         <image name="sun" width="180" height="170"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AcY-bZ-rS8"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
