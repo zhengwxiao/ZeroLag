@@ -16,20 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     // Check if it's the first launch and redirect to the correct view
     let launchedBefore = UserDefaults.standard.bool(forKey: "isFirstLaunch")
     
-    if !launchedBefore {
-        UserDefaults.standard.set(true, forKey: "isFirstLaunch")
-    
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Tutorial")
-        window?.rootViewController = vc
-    }
-    
     let notificationController = NotificationController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         notificationController.notificationCenter.delegate = self
+        
+        if !launchedBefore {
+              UserDefaults.standard.set(true, forKey: "isFirstLaunch")
+          
+              let storyboard = UIStoryboard(name: "Main", bundle: nil)
+              let vc = storyboard.instantiateViewController(withIdentifier: "SetupNC")
+          }
         
         return true
     }
