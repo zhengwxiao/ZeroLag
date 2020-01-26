@@ -476,6 +476,11 @@ let's start by gathering some information about your sleep schedule.</string>
                             <barButtonItem style="plain" systemItem="add" id="u4n-vX-IBg"/>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ArrivalLabel" destination="pG8-Gp-ILy" id="gqT-nw-ZCP"/>
+                        <outlet property="DepartLabel" destination="6UD-S0-5QX" id="S6N-lv-oBN"/>
+                        <outlet property="FlightNum" destination="9ho-Ug-dOG" id="Esm-kK-mD2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKX-1a-lD7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

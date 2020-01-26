@@ -56,13 +56,14 @@ struct passengerCapacity: Decodable {
     let first: Int
 }
 
+var date = ""
+var flightNumber = ""
+var choice: Flight?
+
 class AddFlightViewController: UIViewController {
     
     @IBOutlet weak var flightDatePicker: UIDatePicker!
     @IBOutlet weak var flightNumberTextField: UITextField!
-    var date = ""
-    var flightNumber = ""
-    var choice: Flight?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +80,7 @@ class AddFlightViewController: UIViewController {
         print(date)
         print(flightNumber)
         getFlight()
+        calculateSleep()
     }
     
     func getFlight() {
@@ -94,8 +96,8 @@ class AddFlightViewController: UIViewController {
             do {
                 let flightData = try JSONDecoder().decode([Flight].self, from: data)
                 for flight in flightData {
-                    if flight.flightNumber == self.flightNumber {
-                        self.choice = flight
+                    if flight.flightNumber == flightNumber {
+                        choice = flight
                         print(flight)
                     }
                 }
@@ -105,6 +107,43 @@ class AddFlightViewController: UIViewController {
             
         }.resume()
     }
+    
+    func calculateSleep() {
+        var isEast:Bool
+        let originTimeZone = (choice?.departureTime)?.suffix(6)
+        let destinationTimeZone = (choice?.arrivalTime)?.suffix(6)
+        guard let originTimeZoneTemp = originTimeZone?.prefix(3) else { return }
+        guard let destinationTimeZoneTemp = destinationTimeZone?.prefix(3) else { return }
+        guard let originTimeZoneInt = Int(String(originTimeZoneTemp)) else {return}
+        guard let destinationTimeZoneInt = Int(String(destinationTimeZoneTemp)) else {return}
+        var timeDifference = destinationTimeZoneInt - originTimeZoneInt
+        if ((destinationTimeZoneInt - originTimeZoneInt) < 0) {
+            isEast = false
+            timeDifference = (timeDifference * -1) / 2
+        }
+        else  if ((destinationTimeZoneInt - originTimeZoneInt) > 0){
+            isEast = true
+        }
+        else {
+            timeDifference = 0;
+            print("same time zone")
+        }
+            
+    }
+    
+    func getNewDate(isEast:Bool, timeDifference:Int) {
+        
+        guard var dateint = Int(date.suffix(2)) else {return}
+        for index in 1...timeDifference {
+            dateint = dateint - 1;
+        }
+        
+    }
+    
+
+
+    
+    
     
     /*
     // MARK: - Navigation
