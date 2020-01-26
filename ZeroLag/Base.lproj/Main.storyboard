@@ -121,10 +121,9 @@
                         <viewLayoutGuide key="safeArea" id="u62-2s-zXX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Flight" id="Awl-aF-Tui">
-                        <barButtonItem key="rightBarButtonItem" title="Search" style="done" id="j5p-hS-IFS">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="j5p-hS-IFS">
                             <connections>
                                 <action selector="searchPressed:" destination="xik-p5-63g" id="WBB-QL-DYX"/>
-                                <segue destination="qGE-yX-JAT" kind="show" id="sYK-iG-BMW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -230,6 +229,7 @@
                     <connections>
                         <segue destination="85b-F2-ost" kind="relationship" relationship="viewControllers" id="a93-zn-T4d"/>
                         <segue destination="DmJ-dd-aIK" kind="relationship" relationship="viewControllers" id="1CQ-im-hIG"/>
+                        <segue destination="Wxr-1E-91d" kind="relationship" relationship="viewControllers" id="gPQ-Jg-aZF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZyG-ig-oVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -467,19 +467,41 @@ let's start by gathering some information about your sleep schedule.</string>
                         <viewLayoutGuide key="safeArea" id="ece-3p-580"/>
                     </view>
                     <navigationItem key="navigationItem" title="Your Flights" id="Nyf-hS-qEm">
-                        <barButtonItem key="rightBarButtonItem" style="done" id="EKG-so-VKO">
-                            <connections>
-                                <action selector="searchPressed:" destination="qGE-yX-JAT" id="Axo-YM-Ob3"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" id="EKG-so-VKO">
+                                <connections>
+                                    <action selector="searchPressed:" destination="qGE-yX-JAT" id="Axo-YM-Ob3"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" systemItem="add" id="u4n-vX-IBg"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKX-1a-lD7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1557.9710144927537" y="-346.20535714285711"/>
+            <point key="canvasLocation" x="-1168" y="1076"/>
+        </scene>
+        <!--Flights-->
+        <scene sceneID="xCP-AC-Omp">
+            <objects>
+                <navigationController id="Wxr-1E-91d" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Flights" image="airplane" catalog="system" id="V4m-cf-juu"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Hcg-UZ-ihd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qGE-yX-JAT" kind="relationship" relationship="rootViewController" id="Tur-Dc-esk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlU-Uk-akZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1949" y="1075"/>
         </scene>
     </scenes>
     <resources>
+        <image name="airplane" catalog="system" width="64" height="56"/>
         <image name="clock" catalog="system" width="64" height="60"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
@@ -488,4 +510,5 @@ let's start by gathering some information about your sleep schedule.</string>
         <image name="sleep" width="772" height="772"/>
         <image name="sun" width="180" height="170"/>
     </resources>
+    <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
