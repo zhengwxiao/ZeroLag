@@ -9,14 +9,22 @@
 import UIKit
 
 class AddFlightViewController: UIViewController {
-
+    
+    @IBOutlet weak var flightDatePicker: UIDatePicker!
+    @IBOutlet weak var flightNumberTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
     }
     
-
+    @IBAction func searchPressed(_ sender: Any) {
+        print(flightDatePicker.date)
+        print(flightNumberTextField.text!)
+    }
+    
     /*
     // MARK: - Navigation
 

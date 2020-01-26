@@ -107,8 +107,16 @@
                         <viewLayoutGuide key="safeArea" id="u62-2s-zXX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Flight" id="Awl-aF-Tui">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="j5p-hS-IFS"/>
+                        <barButtonItem key="rightBarButtonItem" title="Search" style="done" id="j5p-hS-IFS">
+                            <connections>
+                                <action selector="searchPressed:" destination="xik-p5-63g" id="WBB-QL-DYX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="flightDatePicker" destination="DBC-Ub-Dfh" id="cAU-UG-hvh"/>
+                        <outlet property="flightNumberTextField" destination="nkq-bD-Azb" id="zTJ-e3-lAm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x1G-if-LBB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +165,6 @@
         <!--Schedule-->
         <scene sceneID="bwp-2h-ghZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lXD-tq-aO6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="DmJ-dd-aIK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Schedule" image="clock" catalog="system" id="kAR-Hj-GpV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -169,6 +176,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eBK-V9-xAD"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXD-tq-aO6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1542" y="366"/>
         </scene>
