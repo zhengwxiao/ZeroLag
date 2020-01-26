@@ -299,7 +299,7 @@ add a flight to start.</string>
                                     <constraint firstAttribute="height" constant="90" id="uyf-Qu-Ejb"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Umd-IG-F3J">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Umd-IG-F3J">
                                 <rect key="frame" x="20" y="280" width="374" height="513"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Stay hydrated! Drink water in" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfQ-OX-pEg">
@@ -512,65 +512,71 @@ let's start by gathering some information about your sleep schedule.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1I-Hc-YLa">
-                                <rect key="frame" x="20" y="155" width="374" height="154"/>
+                                <rect key="frame" x="20" y="155" width="374" height="152"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Number: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuO-mC-2Os">
-                                        <rect key="frame" x="24" y="22" width="167" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muP-k8-Zt7">
-                                        <rect key="frame" x="68" y="65" width="117" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AA - 4312" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ho-Ug-dOG">
-                                        <rect key="frame" x="199" y="22" width="93" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1W-1I-jEH">
-                                        <rect key="frame" x="104" y="108" width="81" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IAH - 3:30pm " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UD-S0-5QX">
-                                        <rect key="frame" x="199" y="67.5" width="167" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IAH - 3:30pm " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pG8-Gp-ILy">
-                                        <rect key="frame" x="199" y="110.5" width="167" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="39q-nm-rc4">
+                                        <rect key="frame" x="20" y="20" width="334" height="112"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CvI-DH-ISk">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="26"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Flight Number: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuO-mC-2Os">
+                                                        <rect key="frame" x="0.0" y="0.0" width="233.5" height="26"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AA - 4312" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ho-Ug-dOG">
+                                                        <rect key="frame" x="241.5" y="0.0" width="92.5" height="26"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="CNt-YV-dah">
+                                                <rect key="frame" x="0.0" y="43" width="334" height="26"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Departure:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muP-k8-Zt7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="203.5" height="26"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IAH - 3:30pm " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UD-S0-5QX">
+                                                        <rect key="frame" x="217.5" y="0.0" width="116.5" height="26"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="c5e-od-EXD">
+                                                <rect key="frame" x="0.0" y="86" width="334" height="26"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Arrival:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1W-1I-jEH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="203.5" height="26"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IAH - 3:30pm " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pG8-Gp-ILy">
+                                                        <rect key="frame" x="217.5" y="0.0" width="116.5" height="26"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="6UD-S0-5QX" firstAttribute="trailing" secondItem="pG8-Gp-ILy" secondAttribute="trailing" id="410-Rs-PfZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="9ho-Ug-dOG" secondAttribute="trailing" constant="82" id="IaC-P8-Nsa"/>
-                                    <constraint firstItem="6UD-S0-5QX" firstAttribute="leading" secondItem="pG8-Gp-ILy" secondAttribute="leading" id="MPs-L8-nQ9"/>
-                                    <constraint firstItem="AuO-mC-2Os" firstAttribute="baseline" secondItem="9ho-Ug-dOG" secondAttribute="baseline" id="Rj4-W3-sPT"/>
-                                    <constraint firstItem="9ho-Ug-dOG" firstAttribute="baseline" secondItem="AuO-mC-2Os" secondAttribute="firstBaseline" id="VQk-6M-pvg"/>
-                                    <constraint firstItem="muP-k8-Zt7" firstAttribute="trailing" secondItem="T1W-1I-jEH" secondAttribute="trailing" id="Vz0-YR-bx5"/>
-                                    <constraint firstItem="T1W-1I-jEH" firstAttribute="top" secondItem="muP-k8-Zt7" secondAttribute="bottom" constant="17" id="c2N-r2-hsQ"/>
-                                    <constraint firstItem="muP-k8-Zt7" firstAttribute="baseline" secondItem="6UD-S0-5QX" secondAttribute="baseline" id="dAV-mr-5fm"/>
-                                    <constraint firstItem="T1W-1I-jEH" firstAttribute="baseline" secondItem="pG8-Gp-ILy" secondAttribute="baseline" id="fN3-nn-Scv"/>
-                                    <constraint firstItem="6UD-S0-5QX" firstAttribute="trailing" secondItem="t1I-Hc-YLa" secondAttribute="trailingMargin" id="gJT-9w-OeU"/>
-                                    <constraint firstItem="AuO-mC-2Os" firstAttribute="top" secondItem="t1I-Hc-YLa" secondAttribute="top" constant="22" id="gOY-Mt-ZoE"/>
-                                    <constraint firstAttribute="bottom" secondItem="T1W-1I-jEH" secondAttribute="bottom" constant="20" id="l3K-dy-3ru"/>
-                                    <constraint firstItem="pG8-Gp-ILy" firstAttribute="baseline" secondItem="T1W-1I-jEH" secondAttribute="firstBaseline" id="lk1-ga-kvs"/>
-                                    <constraint firstItem="6UD-S0-5QX" firstAttribute="baseline" secondItem="muP-k8-Zt7" secondAttribute="firstBaseline" id="plq-82-cNK"/>
-                                    <constraint firstItem="9ho-Ug-dOG" firstAttribute="leading" secondItem="6UD-S0-5QX" secondAttribute="leading" id="tNd-uo-jBX"/>
-                                    <constraint firstItem="6UD-S0-5QX" firstAttribute="leading" secondItem="muP-k8-Zt7" secondAttribute="trailing" constant="14" id="u3c-zj-Npa"/>
-                                    <constraint firstItem="9ho-Ug-dOG" firstAttribute="leading" secondItem="AuO-mC-2Os" secondAttribute="trailing" constant="8" id="wdy-dj-fTH"/>
-                                    <constraint firstItem="muP-k8-Zt7" firstAttribute="top" secondItem="AuO-mC-2Os" secondAttribute="bottom" constant="17" id="xBm-W0-HIG"/>
+                                    <constraint firstItem="39q-nm-rc4" firstAttribute="top" secondItem="t1I-Hc-YLa" secondAttribute="top" constant="20" id="Ofp-67-ICP"/>
+                                    <constraint firstItem="39q-nm-rc4" firstAttribute="leading" secondItem="t1I-Hc-YLa" secondAttribute="leading" constant="20" id="dSP-p2-s78"/>
+                                    <constraint firstAttribute="bottom" secondItem="39q-nm-rc4" secondAttribute="bottom" constant="20" id="h8q-hZ-WQ3"/>
+                                    <constraint firstAttribute="trailing" secondItem="39q-nm-rc4" secondAttribute="trailing" constant="20" id="tch-Bo-k5F"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
@@ -579,9 +585,12 @@ let's start by gathering some information about your sleep schedule.</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMk-cg-lVh">
-                                <rect key="frame" x="124" y="336" width="126" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMk-cg-lVh">
+                                <rect key="frame" x="144" y="327" width="126" height="35"/>
                                 <color key="backgroundColor" red="0.45834851259999998" green="0.55297040939999997" blue="0.73337584730000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="yOE-Gb-rMZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <state key="normal" title="View Schedule">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -598,13 +607,12 @@ let's start by gathering some information about your sleep schedule.</string>
                         </subviews>
                         <color key="backgroundColor" red="0.98748987909999997" green="0.95754331349999999" blue="0.91763526200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="t1I-Hc-YLa" firstAttribute="leading" secondItem="5QQ-pw-2mR" secondAttribute="leadingMargin" id="0yA-IE-cKB"/>
-                            <constraint firstItem="ece-3p-580" firstAttribute="bottom" secondItem="FMk-cg-lVh" secondAttribute="bottom" constant="466" id="3vn-TR-crw"/>
-                            <constraint firstItem="t1I-Hc-YLa" firstAttribute="top" secondItem="ece-3p-580" secondAttribute="top" constant="15" id="MGe-nq-bif"/>
-                            <constraint firstItem="t1I-Hc-YLa" firstAttribute="centerX" secondItem="FMk-cg-lVh" secondAttribute="centerX" id="fyr-gz-VQQ"/>
-                            <constraint firstItem="t1I-Hc-YLa" firstAttribute="trailing" secondItem="5QQ-pw-2mR" secondAttribute="trailingMargin" id="hVB-bK-w4u"/>
-                            <constraint firstItem="FMk-cg-lVh" firstAttribute="top" secondItem="t1I-Hc-YLa" secondAttribute="bottom" constant="8" id="or6-hl-X6t"/>
-                            <constraint firstItem="FMk-cg-lVh" firstAttribute="leading" secondItem="ece-3p-580" secondAttribute="leading" constant="136.5" id="uda-nY-ncn"/>
+                            <constraint firstItem="FMk-cg-lVh" firstAttribute="leading" secondItem="ece-3p-580" secondAttribute="leading" constant="144" id="42C-vw-nfa"/>
+                            <constraint firstItem="FMk-cg-lVh" firstAttribute="centerX" secondItem="t1I-Hc-YLa" secondAttribute="centerX" id="Lxl-qs-c5V"/>
+                            <constraint firstItem="ece-3p-580" firstAttribute="trailing" secondItem="t1I-Hc-YLa" secondAttribute="trailing" constant="20" id="P7a-47-Tjt"/>
+                            <constraint firstItem="t1I-Hc-YLa" firstAttribute="leading" secondItem="5QQ-pw-2mR" secondAttribute="leadingMargin" id="X7j-jZ-S9d"/>
+                            <constraint firstItem="FMk-cg-lVh" firstAttribute="top" secondItem="t1I-Hc-YLa" secondAttribute="bottom" constant="20" id="pzW-c3-Cmf"/>
+                            <constraint firstItem="t1I-Hc-YLa" firstAttribute="top" secondItem="ece-3p-580" secondAttribute="top" constant="15" id="zz2-PF-fi3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ece-3p-580"/>
                     </view>
@@ -663,7 +671,7 @@ let's start by gathering some information about your sleep schedule.</string>
         <image name="sun" width="180" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xKO-VG-vBQ"/>
+        <segue reference="M0Q-2c-SgS"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
