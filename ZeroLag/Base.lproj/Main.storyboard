@@ -121,7 +121,7 @@
                         <viewLayoutGuide key="safeArea" id="u62-2s-zXX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Flight" id="Awl-aF-Tui">
-                        <barButtonItem key="rightBarButtonItem" title="Search" style="done" id="j5p-hS-IFS">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="j5p-hS-IFS">
                             <connections>
                                 <action selector="searchPressed:" destination="xik-p5-63g" id="WBB-QL-DYX"/>
                             </connections>
@@ -467,11 +467,14 @@ let's start by gathering some information about your sleep schedule.</string>
                         <viewLayoutGuide key="safeArea" id="ece-3p-580"/>
                     </view>
                     <navigationItem key="navigationItem" title="Your Flights" id="Nyf-hS-qEm">
-                        <barButtonItem key="rightBarButtonItem" style="done" id="EKG-so-VKO">
-                            <connections>
-                                <action selector="searchPressed:" destination="qGE-yX-JAT" id="Axo-YM-Ob3"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" id="EKG-so-VKO">
+                                <connections>
+                                    <action selector="searchPressed:" destination="qGE-yX-JAT" id="Axo-YM-Ob3"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" systemItem="add" id="u4n-vX-IBg"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKX-1a-lD7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -507,5 +510,5 @@ let's start by gathering some information about your sleep schedule.</string>
         <image name="sleep" width="772" height="772"/>
         <image name="sun" width="180" height="170"/>
     </resources>
-    <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
