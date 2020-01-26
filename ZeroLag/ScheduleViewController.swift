@@ -22,6 +22,7 @@ class ScheduleViewController: UIViewController {
     
     @IBOutlet weak var sleepImageView: UIImageView!
     
+    
     let notificationController = NotificationController()
     let customBlue = UIColor(red: 0.029, green: 0.269, blue: 0.629, alpha: 0.58)
     let customPurple = UIColor(hue: 0.6556, saturation: 0.41, brightness: 0.61, alpha: 1.0)

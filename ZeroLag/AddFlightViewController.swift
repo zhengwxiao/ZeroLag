@@ -82,9 +82,10 @@ class AddFlightViewController: UIViewController {
         getFlight()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.calculateSleep()
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "FlightsVC")
-            self.show(vc, sender: Any?.self)
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "FlightsVC")
+//            self.show(vc, sender: Any?.self)
+            self.tabBarController?.selectedIndex = 2
         }
     }
     

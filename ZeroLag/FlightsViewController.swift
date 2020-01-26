@@ -24,7 +24,10 @@ class FlightsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func viewPressed(_ sender: Any) {
+        tabBarController?.selectedIndex = 1
+    }
+    
     /*
     // MARK: - Navigation
 
