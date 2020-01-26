@@ -42,11 +42,11 @@ class ScheduleViewController: UIViewController {
         
         sleepCountdownLabel.textColor = .systemOrange
         sleepCountdownLabel.font = UIFont(name:"Futura-Bold", size: 25)
-        sleepCountdownLabel.setCountDownTime(minutes: 2000) // Input in seconds
+        sleepCountdownLabel.setCountDownTime(minutes: 3600) // Input in seconds
         sleepCountdownLabel.then(targetTime: 1) { [unowned self] in
             self.notificationController.scheduleReminders(title: "Time to Sleep", body: "Try to sleep now to beat jet lag!", delay: 1)
             self.sleepLabel.text = "Wake up in"
-            self.sleepCountdownLabel.addTime(time: 3000)
+            self.sleepCountdownLabel.addTime(time: 18000)
             self.sleepImageView.image = UIImage(named: "moon")
             self.view.backgroundColor = self.customPurple
             self.sleepScheduleTextView.textColor = .white
