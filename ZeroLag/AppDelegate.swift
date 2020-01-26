@@ -12,14 +12,13 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-    var variable = Int()
     
-
-//    let notificationCenter = UNUserNotificationCenter.current()
-//    let content = UNMutableNotificationContent()
+    let notificationController = NotificationController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        notificationController.notificationCenter.delegate = self
         
         return true
     }
@@ -39,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .sound])
+        completionHandler([.alert, .badge, .sound])
     }
 
     // MARK: - Core Data stack

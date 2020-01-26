@@ -10,17 +10,14 @@ import Foundation
 import UserNotifications
 
 class NotificationController: NSObject {
+    static let shared = NotificationController()
     let notificationCenter = UNUserNotificationCenter.current()
-    let content = UNMutableNotificationContent()
     
     // Transferred to ExensionDelegate
     func scheduleReminders() {
-        notificationCenter.removeAllPendingNotificationRequests()
+        // notificationCenter.removeAllPendingNotificationRequests()
         
-        notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
-            print("Notification authorization: (\(granted)")
-        }
-        
+        let content = UNMutableNotificationContent()
         content.title = "Drink Water"
         content.body = "Hydrate or diedrate!"
         content.sound = UNNotificationSound.default

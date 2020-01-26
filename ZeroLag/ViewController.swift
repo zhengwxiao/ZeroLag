@@ -13,26 +13,24 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var waterReminderLabel: CountdownLabel!
     
+    let notificationController = NotificationController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         waterReminderLabel.countdownDelegate = self
-        waterReminderLabel.setCountDownTime(minutes: 60)
+        waterReminderLabel.setCountDownTime(minutes: 10) // Input in seconds
         waterReminderLabel.start()
     }
-    
-    
 }
 
 extension ViewController: CountdownLabelDelegate {
     func countdownFinished() {
-        NotificationController().scheduleReminders()
+        notificationController.scheduleReminders()
     }
     
     func countingAt(timeCounted: TimeInterval, timeRemaining: TimeInterval) {
-        debugPrint("time counted at delegate=\(timeCounted)")
-        debugPrint("time remaining at delegate=\(timeRemaining)")
     }
     
 }
