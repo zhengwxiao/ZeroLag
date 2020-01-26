@@ -15,16 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ZeroLag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkr-bZ-xZi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZeroLag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkr-bZ-xZi">
                                 <rect key="frame" x="20" y="140" width="224" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gte-2e-vH2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gte-2e-vH2">
                                 <rect key="frame" x="20" y="213" width="327" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">beat jet lag before it happens.
 
 add a flight to start.</string>
@@ -32,10 +30,12 @@ add a flight to start.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4p-YR-6RM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4p-YR-6RM">
                                 <rect key="frame" x="20" y="624" width="221" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="5po-v6-J41"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
                                 <state key="normal" title="Add Flight" image="plus.circle.fill" catalog="system">
@@ -51,16 +51,35 @@ add a flight to start.</string>
                                     <segue destination="xik-p5-63g" kind="show" id="xKO-VG-vBQ"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="T2L-mc-k7D">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="T2L-mc-k7D">
                                 <rect key="frame" x="154" y="416" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="aSQ-Tp-5Je"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="Dtf-2p-0C3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="Dtf-2p-0C3">
                                 <rect key="frame" x="226" y="352" width="139" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="wVQ-CT-62Y"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gte-2e-vH2" firstAttribute="top" secondItem="fkr-bZ-xZi" secondAttribute="bottom" constant="8" id="4Ah-5K-L4M"/>
+                            <constraint firstItem="T2L-mc-k7D" firstAttribute="leading" secondItem="br1-hh-y6t" secondAttribute="leading" constant="154" id="5yi-b6-ka7"/>
+                            <constraint firstItem="Dtf-2p-0C3" firstAttribute="leading" secondItem="br1-hh-y6t" secondAttribute="leading" constant="226" id="6ZT-qk-A2c"/>
+                            <constraint firstItem="fkr-bZ-xZi" firstAttribute="leading" secondItem="DZ1-bv-EER" secondAttribute="leadingMargin" id="AEj-L3-RaR"/>
+                            <constraint firstItem="br1-hh-y6t" firstAttribute="trailing" secondItem="k4p-YR-6RM" secondAttribute="trailing" constant="173" id="AVO-fv-F3q"/>
+                            <constraint firstItem="T2L-mc-k7D" firstAttribute="trailing" secondItem="DZ1-bv-EER" secondAttribute="trailingMargin" id="Lw5-XU-GKW"/>
+                            <constraint firstItem="br1-hh-y6t" firstAttribute="trailing" secondItem="Dtf-2p-0C3" secondAttribute="trailing" constant="49" id="Tym-hX-pOW"/>
+                            <constraint firstItem="fkr-bZ-xZi" firstAttribute="top" secondItem="br1-hh-y6t" secondAttribute="top" id="Y7k-54-2Bs"/>
+                            <constraint firstItem="k4p-YR-6RM" firstAttribute="top" secondItem="T2L-mc-k7D" secondAttribute="bottom" constant="80" id="bFR-ha-uS6"/>
+                            <constraint firstItem="fkr-bZ-xZi" firstAttribute="leading" secondItem="gte-2e-vH2" secondAttribute="leading" id="eJv-pi-h3U"/>
+                            <constraint firstItem="Dtf-2p-0C3" firstAttribute="top" secondItem="gte-2e-vH2" secondAttribute="bottom" constant="61" id="i83-bV-h4F"/>
+                            <constraint firstItem="br1-hh-y6t" firstAttribute="bottom" secondItem="k4p-YR-6RM" secondAttribute="bottom" constant="128" id="po2-bz-UDM"/>
+                            <constraint firstItem="gte-2e-vH2" firstAttribute="leading" secondItem="k4p-YR-6RM" secondAttribute="leading" id="qzR-c8-EQX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="br1-hh-y6t"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Flight" id="aZS-9E-4Wx"/>
@@ -397,16 +416,17 @@ add a flight to start.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ZeroLag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaU-rh-ip4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZeroLag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaU-rh-ip4">
                                 <rect key="frame" x="20" y="140" width="224" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="HwA-XB-vrh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRJ-u2-RIh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRJ-u2-RIh">
                                 <rect key="frame" x="20" y="213" width="374" height="245"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">beat jet lag before it happens.
 
 this app is designed to help you gradually adjust to your destination time zone.
@@ -416,18 +436,24 @@ let's start by gathering some information about your sleep schedule.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="3jb-2h-q3T">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane" translatesAutoresizingMaskIntoConstraints="NO" id="3jb-2h-q3T">
                                 <rect key="frame" x="154" y="530" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="1p3-bl-A8X"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="t6O-c7-Omz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="t6O-c7-Omz">
                                 <rect key="frame" x="226" y="466" width="139" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="VAf-Ir-xeU"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhI-R7-e7n">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhI-R7-e7n">
                                 <rect key="frame" x="20" y="716" width="221" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Q7Q-5Z-dtg"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
                                 <state key="normal" title="Start" image="person.fill" catalog="system">
@@ -445,6 +471,23 @@ let's start by gathering some information about your sleep schedule.</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IaU-rh-ip4" firstAttribute="top" secondItem="vTq-4v-lJv" secondAttribute="top" id="31d-Ak-P5i"/>
+                            <constraint firstItem="DRJ-u2-RIh" firstAttribute="top" secondItem="IaU-rh-ip4" secondAttribute="bottom" constant="8" id="43z-yz-A9a"/>
+                            <constraint firstItem="IaU-rh-ip4" firstAttribute="leading" secondItem="DRJ-u2-RIh" secondAttribute="leading" id="7qK-4P-OAt"/>
+                            <constraint firstItem="3jb-2h-q3T" firstAttribute="leading" secondItem="vTq-4v-lJv" secondAttribute="leading" constant="154" id="9cn-Jd-5RS"/>
+                            <constraint firstItem="IaU-rh-ip4" firstAttribute="leading" secondItem="qKp-8P-Glf" secondAttribute="leadingMargin" id="A8i-vw-BBX"/>
+                            <constraint firstItem="DRJ-u2-RIh" firstAttribute="trailing" secondItem="3jb-2h-q3T" secondAttribute="trailing" id="Ef7-SA-ahd"/>
+                            <constraint firstItem="vTq-4v-lJv" firstAttribute="trailing" secondItem="lhI-R7-e7n" secondAttribute="trailing" constant="173" id="FE4-yI-I3l"/>
+                            <constraint firstItem="t6O-c7-Omz" firstAttribute="top" secondItem="DRJ-u2-RIh" secondAttribute="bottom" constant="8" id="Ihy-24-ceG"/>
+                            <constraint firstItem="vTq-4v-lJv" firstAttribute="bottom" secondItem="lhI-R7-e7n" secondAttribute="bottom" constant="36" id="KVF-9D-WwK"/>
+                            <constraint firstItem="t6O-c7-Omz" firstAttribute="leading" secondItem="vTq-4v-lJv" secondAttribute="leading" constant="226" id="LuM-WZ-cN0"/>
+                            <constraint firstItem="lhI-R7-e7n" firstAttribute="top" secondItem="3jb-2h-q3T" secondAttribute="bottom" constant="58" id="Nwq-ZN-cUw"/>
+                            <constraint firstItem="3jb-2h-q3T" firstAttribute="top" secondItem="DRJ-u2-RIh" secondAttribute="bottom" constant="72" id="PQF-R4-zd3"/>
+                            <constraint firstItem="DRJ-u2-RIh" firstAttribute="leading" secondItem="lhI-R7-e7n" secondAttribute="leading" id="SOz-tj-9Kz"/>
+                            <constraint firstItem="vTq-4v-lJv" firstAttribute="trailing" secondItem="t6O-c7-Omz" secondAttribute="trailing" constant="49" id="W9k-tp-JPK"/>
+                            <constraint firstItem="DRJ-u2-RIh" firstAttribute="trailing" secondItem="qKp-8P-Glf" secondAttribute="trailingMargin" id="slu-xd-QQ3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vTq-4v-lJv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="gGZ-lk-maf"/>
@@ -602,7 +645,7 @@ let's start by gathering some information about your sleep schedule.</string>
         <image name="sun" width="180" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M0Q-2c-SgS"/>
+        <segue reference="xKO-VG-vBQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
