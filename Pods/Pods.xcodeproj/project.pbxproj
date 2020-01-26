@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B2BA2BBA6B9FA9D2EB68CA5CA301531 /* CountdownLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4DABBBC8B8A5CF8EB73EFF9474F5AF /* CountdownLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C817896DFBD39C8A6BB7BEBDF755F93 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA7DE11DC381E3E2003F8B5A715EA3B /* LTMorphingLabel+Fall.swift */; };
+		16D9E10E38F16D054EB9213716D60D05 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		32026F49587523E2C626BA361B9679FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		47C0A330FC562DC2AC53BE3DEE937B78 /* LTCharacterDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DAD068E2524E25F66C30455F68581 /* LTCharacterDiffResult.swift */; };
+		4987724757E2960084253E8B2D6A58CE /* CountdownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505258D921CE362EF103DDBD56207C6A /* CountdownLabel.swift */; };
+		53AC83D493FF29A4EF3FDFD1B7C498A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		5790F6D4539236D5328E4D0E51598675 /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6799AC6348493E4D3FC3FF7EA653D52 /* LTMorphingLabel+Evaporate.swift */; };
+		63EDEF73B6D575166263A6348C8575EC /* LTStringDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEC5DA0BE0D8181A95396AC2A18C7D0 /* LTStringDiffResult.swift */; };
+		6CDB59EEC150D667CD83B768B8012433 /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401DE1EB289D62D3F702F098577B4346 /* LTEasing.swift */; };
+		91547A282331838986182707BFEA9E52 /* Pods-ZeroLag-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF9E3003615784A49C94FED587DE750 /* Pods-ZeroLag-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A75DA5235E55468C200EE7E290612428 /* CountdownLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A074FD9843C8B8BEAC679AC49B91FC13 /* CountdownLabel-dummy.m */; };
+		AA7814DAF8D4675B1B16D7350CA40F9A /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3754E27EC491706AF0D2B2EB04D30 /* LTMorphingEffect.swift */; };
+		AD3516E47F2AC55B8FFE8EE0872AC408 /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A3D132E6033CCC5C75DDE25B456008 /* LTMorphingLabel+Sparkle.swift */; };
+		B18250053B49384283B13EBA3EDA0B54 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E8355EA04FB4FF7D179033470C50F4 /* LTMorphingLabel+Pixelate.swift */; };
+		C93E20E59750EA450136B8A93FB3037D /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142901D85443B69082CAFFF89F305A37 /* LTMorphingLabel+Anvil.swift */; };
+		CC4D492BE2A4DB607124B683108D22AF /* LTEmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F51CF0CC2B98C72F2DAB3A751853D5 /* LTEmitterView.swift */; };
+		D2E986C8F2737BAE2CF4985EA478131C /* Pods-ZeroLag-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60396C9AAC286B0B868CE8D4C4D677B2 /* Pods-ZeroLag-dummy.m */; };
+		DF847F0DFFF13E1A135648BA588A1295 /* LTMorphingLabel+Burn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796CCC44C02F742B44D7DF07056D852A /* LTMorphingLabel+Burn.swift */; };
+		EE35A1D5FB6C6E77B1286EB4EA6D120D /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E45DA02941D49A0630192140DAF6F /* LTCharacterLimbo.swift */; };
+		F6A309D83F7DD2145FE455F58A54B8D6 /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57817C032B6137DE121813D08B5AC30 /* LTMorphingLabel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E04AA04CFA27D2DE12C93FAE3AD6DBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DD526091D33E33B86AFCF37F8478384;
+			remoteInfo = CountdownLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F3EB794D3870654FF50036ED66086F /* CountdownLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CountdownLabel-prefix.pch"; sourceTree = "<group>"; };
+		0FA7DE11DC381E3E2003F8B5A715EA3B /* LTMorphingLabel+Fall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Fall.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Fall.swift"; sourceTree = "<group>"; };
+		1275D350DBE94D7C90B0A9C93CDCB924 /* Pods-ZeroLag-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZeroLag-acknowledgements.markdown"; sourceTree = "<group>"; };
+		142901D85443B69082CAFFF89F305A37 /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Anvil.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
+		1B10B8E932A089A870C260B1142BEDE4 /* Pods_ZeroLag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZeroLag.framework; path = "Pods-ZeroLag.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B3E0A05D00FB814B332E395CF8FDA8 /* Pods-ZeroLag-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZeroLag-Info.plist"; sourceTree = "<group>"; };
+		25AA7D86F94C7255179CC245409EF108 /* Pods-ZeroLag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZeroLag.debug.xcconfig"; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		35AC72BC622BC0B5759A2D9243FDA306 /* Pods-ZeroLag-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZeroLag-frameworks.sh"; sourceTree = "<group>"; };
+		36D3CE2B2D8CDD300369B4874DD86A70 /* Pods-ZeroLag.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZeroLag.modulemap"; sourceTree = "<group>"; };
+		39401ED59F5F056D8467404B5445EA43 /* Pods-ZeroLag-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZeroLag-acknowledgements.plist"; sourceTree = "<group>"; };
+		401DE1EB289D62D3F702F098577B4346 /* LTEasing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTEasing.swift; path = CountdownLabel/LTMorphingLabel/LTEasing.swift; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		47F31C282C2EA7926A01C40F33CF885D /* Pods-ZeroLag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZeroLag.release.xcconfig"; sourceTree = "<group>"; };
+		4BA3754E27EC491706AF0D2B2EB04D30 /* LTMorphingEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTMorphingEffect.swift; path = CountdownLabel/LTMorphingLabel/LTMorphingEffect.swift; sourceTree = "<group>"; };
+		4F4DABBBC8B8A5CF8EB73EFF9474F5AF /* CountdownLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CountdownLabel-umbrella.h"; sourceTree = "<group>"; };
+		505258D921CE362EF103DDBD56207C6A /* CountdownLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountdownLabel.swift; path = CountdownLabel/CountdownLabel.swift; sourceTree = "<group>"; };
+		54E8355EA04FB4FF7D179033470C50F4 /* LTMorphingLabel+Pixelate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Pixelate.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Pixelate.swift"; sourceTree = "<group>"; };
+		5E9DAD068E2524E25F66C30455F68581 /* LTCharacterDiffResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTCharacterDiffResult.swift; path = CountdownLabel/LTMorphingLabel/LTCharacterDiffResult.swift; sourceTree = "<group>"; };
+		5FEC5DA0BE0D8181A95396AC2A18C7D0 /* LTStringDiffResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTStringDiffResult.swift; path = CountdownLabel/LTMorphingLabel/LTStringDiffResult.swift; sourceTree = "<group>"; };
+		60396C9AAC286B0B868CE8D4C4D677B2 /* Pods-ZeroLag-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZeroLag-dummy.m"; sourceTree = "<group>"; };
+		620B2678EEBF6CD623AD11729353CABB /* CountdownLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CountdownLabel.xcconfig; sourceTree = "<group>"; };
+		796CCC44C02F742B44D7DF07056D852A /* LTMorphingLabel+Burn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Burn.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Burn.swift"; sourceTree = "<group>"; };
+		8C86383D4AEF4A56A77E21BA63D72A10 /* CountdownLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CountdownLabel.framework; path = CountdownLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A074FD9843C8B8BEAC679AC49B91FC13 /* CountdownLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CountdownLabel-dummy.m"; sourceTree = "<group>"; };
+		AAF9E3003615784A49C94FED587DE750 /* Pods-ZeroLag-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZeroLag-umbrella.h"; sourceTree = "<group>"; };
+		B34BF16EE71BEACF7619320AF914787A /* CountdownLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CountdownLabel-Info.plist"; sourceTree = "<group>"; };
+		C4A3D132E6033CCC5C75DDE25B456008 /* LTMorphingLabel+Sparkle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Sparkle.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Sparkle.swift"; sourceTree = "<group>"; };
+		D57817C032B6137DE121813D08B5AC30 /* LTMorphingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTMorphingLabel.swift; path = CountdownLabel/LTMorphingLabel/LTMorphingLabel.swift; sourceTree = "<group>"; };
+		DEFDBB19B7307A251ED24C2AC5C406D8 /* CountdownLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CountdownLabel.modulemap; sourceTree = "<group>"; };
+		E13E45DA02941D49A0630192140DAF6F /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTCharacterLimbo.swift; path = CountdownLabel/LTMorphingLabel/LTCharacterLimbo.swift; sourceTree = "<group>"; };
+		E6799AC6348493E4D3FC3FF7EA653D52 /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Evaporate.swift"; path = "CountdownLabel/LTMorphingLabel/LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
+		E9F51CF0CC2B98C72F2DAB3A751853D5 /* LTEmitterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTEmitterView.swift; path = CountdownLabel/LTMorphingLabel/LTEmitterView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F48A0E47FD5562ACD8DC8768E81AF7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53AC83D493FF29A4EF3FDFD1B7C498A8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A9969F007568A3FB918568350420627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32026F49587523E2C626BA361B9679FF /* Foundation.framework in Frameworks */,
+				16D9E10E38F16D054EB9213716D60D05 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13419DB11FD3DD3199773DEA03480E7A /* Pods-ZeroLag */ = {
+			isa = PBXGroup;
+			children = (
+				36D3CE2B2D8CDD300369B4874DD86A70 /* Pods-ZeroLag.modulemap */,
+				1275D350DBE94D7C90B0A9C93CDCB924 /* Pods-ZeroLag-acknowledgements.markdown */,
+				39401ED59F5F056D8467404B5445EA43 /* Pods-ZeroLag-acknowledgements.plist */,
+				60396C9AAC286B0B868CE8D4C4D677B2 /* Pods-ZeroLag-dummy.m */,
+				35AC72BC622BC0B5759A2D9243FDA306 /* Pods-ZeroLag-frameworks.sh */,
+				23B3E0A05D00FB814B332E395CF8FDA8 /* Pods-ZeroLag-Info.plist */,
+				AAF9E3003615784A49C94FED587DE750 /* Pods-ZeroLag-umbrella.h */,
+				25AA7D86F94C7255179CC245409EF108 /* Pods-ZeroLag.debug.xcconfig */,
+				47F31C282C2EA7926A01C40F33CF885D /* Pods-ZeroLag.release.xcconfig */,
+			);
+			name = "Pods-ZeroLag";
+			path = "Target Support Files/Pods-ZeroLag";
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		518AF7D32A7E086DFCA866A890D2E05D /* CountdownLabel */ = {
+			isa = PBXGroup;
+			children = (
+				505258D921CE362EF103DDBD56207C6A /* CountdownLabel.swift */,
+				5E9DAD068E2524E25F66C30455F68581 /* LTCharacterDiffResult.swift */,
+				E13E45DA02941D49A0630192140DAF6F /* LTCharacterLimbo.swift */,
+				401DE1EB289D62D3F702F098577B4346 /* LTEasing.swift */,
+				E9F51CF0CC2B98C72F2DAB3A751853D5 /* LTEmitterView.swift */,
+				4BA3754E27EC491706AF0D2B2EB04D30 /* LTMorphingEffect.swift */,
+				D57817C032B6137DE121813D08B5AC30 /* LTMorphingLabel.swift */,
+				142901D85443B69082CAFFF89F305A37 /* LTMorphingLabel+Anvil.swift */,
+				796CCC44C02F742B44D7DF07056D852A /* LTMorphingLabel+Burn.swift */,
+				E6799AC6348493E4D3FC3FF7EA653D52 /* LTMorphingLabel+Evaporate.swift */,
+				0FA7DE11DC381E3E2003F8B5A715EA3B /* LTMorphingLabel+Fall.swift */,
+				54E8355EA04FB4FF7D179033470C50F4 /* LTMorphingLabel+Pixelate.swift */,
+				C4A3D132E6033CCC5C75DDE25B456008 /* LTMorphingLabel+Sparkle.swift */,
+				5FEC5DA0BE0D8181A95396AC2A18C7D0 /* LTStringDiffResult.swift */,
+				AD9A0672C7954FE747D45CDE953B532E /* Support Files */,
+			);
+			name = CountdownLabel;
+			path = CountdownLabel;
+			sourceTree = "<group>";
+		};
+		73582741D5BB610CFDD8E66A82EF8BAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				518AF7D32A7E086DFCA866A890D2E05D /* CountdownLabel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		903BCFA6A2120D1FB3269F2D8A1C3B22 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				13419DB11FD3DD3199773DEA03480E7A /* Pods-ZeroLag */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AD9A0672C7954FE747D45CDE953B532E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DEFDBB19B7307A251ED24C2AC5C406D8 /* CountdownLabel.modulemap */,
+				620B2678EEBF6CD623AD11729353CABB /* CountdownLabel.xcconfig */,
+				A074FD9843C8B8BEAC679AC49B91FC13 /* CountdownLabel-dummy.m */,
+				B34BF16EE71BEACF7619320AF914787A /* CountdownLabel-Info.plist */,
+				01F3EB794D3870654FF50036ED66086F /* CountdownLabel-prefix.pch */,
+				4F4DABBBC8B8A5CF8EB73EFF9474F5AF /* CountdownLabel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CountdownLabel";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				73582741D5BB610CFDD8E66A82EF8BAB /* Pods */,
+				D9E9567BD9703E702DB8EB375CAB3F3A /* Products */,
+				903BCFA6A2120D1FB3269F2D8A1C3B22 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D9E9567BD9703E702DB8EB375CAB3F3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C86383D4AEF4A56A77E21BA63D72A10 /* CountdownLabel.framework */,
+				1B10B8E932A089A870C260B1142BEDE4 /* Pods_ZeroLag.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4E17BFDB4D888B579B3A36AD486A900B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B2BA2BBA6B9FA9D2EB68CA5CA301531 /* CountdownLabel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77B09AEEFA313398DAD7692A9983618E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91547A282331838986182707BFEA9E52 /* Pods-ZeroLag-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0DD526091D33E33B86AFCF37F8478384 /* CountdownLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09487E8C6CFC82E741E5694A60593617 /* Build configuration list for PBXNativeTarget "CountdownLabel" */;
+			buildPhases = (
+				4E17BFDB4D888B579B3A36AD486A900B /* Headers */,
+				15F146C724823F03FCB62DB247B2C8AF /* Sources */,
+				6A9969F007568A3FB918568350420627 /* Frameworks */,
+				6994B60D8EC617B609AF99718DB64D15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CountdownLabel;
+			productName = CountdownLabel;
+			productReference = 8C86383D4AEF4A56A77E21BA63D72A10 /* CountdownLabel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		278D69CE0E69FB078F9AAEADD0B847D5 /* Pods-ZeroLag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D3F52830E1497E6D6B59A6FD2DFC7C0 /* Build configuration list for PBXNativeTarget "Pods-ZeroLag" */;
+			buildPhases = (
+				77B09AEEFA313398DAD7692A9983618E /* Headers */,
+				41299304246092614FA4AE6E5EF8DE68 /* Sources */,
+				1F48A0E47FD5562ACD8DC8768E81AF7B /* Frameworks */,
+				3AE5C5F65FAA9C9432D9768F1541294E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A96C62F03DB3BD2ADCFD14A4B4FB2A2 /* PBXTargetDependency */,
+			);
+			name = "Pods-ZeroLag";
+			productName = "Pods-ZeroLag";
+			productReference = 1B10B8E932A089A870C260B1142BEDE4 /* Pods_ZeroLag.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D9E9567BD9703E702DB8EB375CAB3F3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0DD526091D33E33B86AFCF37F8478384 /* CountdownLabel */,
+				278D69CE0E69FB078F9AAEADD0B847D5 /* Pods-ZeroLag */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AE5C5F65FAA9C9432D9768F1541294E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6994B60D8EC617B609AF99718DB64D15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15F146C724823F03FCB62DB247B2C8AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75DA5235E55468C200EE7E290612428 /* CountdownLabel-dummy.m in Sources */,
+				4987724757E2960084253E8B2D6A58CE /* CountdownLabel.swift in Sources */,
+				47C0A330FC562DC2AC53BE3DEE937B78 /* LTCharacterDiffResult.swift in Sources */,
+				EE35A1D5FB6C6E77B1286EB4EA6D120D /* LTCharacterLimbo.swift in Sources */,
+				6CDB59EEC150D667CD83B768B8012433 /* LTEasing.swift in Sources */,
+				CC4D492BE2A4DB607124B683108D22AF /* LTEmitterView.swift in Sources */,
+				AA7814DAF8D4675B1B16D7350CA40F9A /* LTMorphingEffect.swift in Sources */,
+				C93E20E59750EA450136B8A93FB3037D /* LTMorphingLabel+Anvil.swift in Sources */,
+				DF847F0DFFF13E1A135648BA588A1295 /* LTMorphingLabel+Burn.swift in Sources */,
+				5790F6D4539236D5328E4D0E51598675 /* LTMorphingLabel+Evaporate.swift in Sources */,
+				0C817896DFBD39C8A6BB7BEBDF755F93 /* LTMorphingLabel+Fall.swift in Sources */,
+				B18250053B49384283B13EBA3EDA0B54 /* LTMorphingLabel+Pixelate.swift in Sources */,
+				AD3516E47F2AC55B8FFE8EE0872AC408 /* LTMorphingLabel+Sparkle.swift in Sources */,
+				F6A309D83F7DD2145FE455F58A54B8D6 /* LTMorphingLabel.swift in Sources */,
+				63EDEF73B6D575166263A6348C8575EC /* LTStringDiffResult.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41299304246092614FA4AE6E5EF8DE68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E986C8F2737BAE2CF4985EA478131C /* Pods-ZeroLag-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A96C62F03DB3BD2ADCFD14A4B4FB2A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CountdownLabel;
+			target = 0DD526091D33E33B86AFCF37F8478384 /* CountdownLabel */;
+			targetProxy = 2E04AA04CFA27D2DE12C93FAE3AD6DBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		19DE21D08DAC9936FCF2F3886C78F719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25AA7D86F94C7255179CC245409EF108 /* Pods-ZeroLag.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZeroLag/Pods-ZeroLag-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZeroLag/Pods-ZeroLag.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		65C28316F25A94809D166B57CA16A814 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 620B2678EEBF6CD623AD11729353CABB /* CountdownLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CountdownLabel/CountdownLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CountdownLabel/CountdownLabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CountdownLabel/CountdownLabel.modulemap";
+				PRODUCT_MODULE_NAME = CountdownLabel;
+				PRODUCT_NAME = CountdownLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B7F95FBBA203BF2D39DF928C11A5BD01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F31C282C2EA7926A01C40F33CF885D /* Pods-ZeroLag.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZeroLag/Pods-ZeroLag-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZeroLag/Pods-ZeroLag.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EF639D5E2B59FF1E57C9E035FCF1CEE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 620B2678EEBF6CD623AD11729353CABB /* CountdownLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CountdownLabel/CountdownLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CountdownLabel/CountdownLabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CountdownLabel/CountdownLabel.modulemap";
+				PRODUCT_MODULE_NAME = CountdownLabel;
+				PRODUCT_NAME = CountdownLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09487E8C6CFC82E741E5694A60593617 /* Build configuration list for PBXNativeTarget "CountdownLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C28316F25A94809D166B57CA16A814 /* Debug */,
+				EF639D5E2B59FF1E57C9E035FCF1CEE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D3F52830E1497E6D6B59A6FD2DFC7C0 /* Build configuration list for PBXNativeTarget "Pods-ZeroLag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19DE21D08DAC9936FCF2F3886C78F719 /* Debug */,
+				B7F95FBBA203BF2D39DF928C11A5BD01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

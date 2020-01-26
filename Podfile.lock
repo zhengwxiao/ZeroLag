@@ -1,0 +1,16 @@
+PODS:
+  - CountdownLabel (4.0.1)
+
+DEPENDENCIES:
+  - CountdownLabel
+
+SPEC REPOS:
+  trunk:
+    - CountdownLabel
+
+SPEC CHECKSUMS:
+  CountdownLabel: c9975e3f329140b5e7d1f45cd63b1300badd1712
+
+PODFILE CHECKSUM: 6433b7b70b61bd8a04aeb4386f109238979863cf
+
+COCOAPODS: 1.8.4
